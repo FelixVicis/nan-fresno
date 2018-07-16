@@ -1,9 +1,6 @@
 from django.db import models
-
-# Create your models here.
 from datetime import datetime
 import uuid
-# Create your models here.
 
 
 def upload_location(instance, filename):
