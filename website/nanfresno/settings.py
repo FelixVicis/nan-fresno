@@ -35,7 +35,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'people',
-    'hello',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -110,12 +109,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-import os.path
-
 STATIC_ROOT = ''
-
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS = (os.path.join('static'), )
 
 ENV_PATH = os.path.abspath(os.path.dirname(__file__))
