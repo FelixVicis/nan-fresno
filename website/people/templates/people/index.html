@@ -1,0 +1,42 @@
+{% extends 'people/layout.html' %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<h1>{{title}}index</h1>
+			{% for people in people %}
+				<div class="card col-xs-6 col-sm-4 col-md-3">
+					<img src="/media/{{MEDIA_URL}}{{people.photo}}" class="img-responsive person_single">
+					<a href="details/{{people.id}}">{{people.firstName}}   {{people.lastName}} </a>
+				</div>
+			{% endfor %}
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 paginate_center">
+			<div class="pagination">
+			    <span class="step-links">
+			        {% if people.has_previous %}
+			            <a href="?page=1">&laquo; first</a>
+			            <a href="?page={{ people.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>
+			        {% endif %}
+
+			        <span class="current">
+			            Page {{ people.number }} of {{ people.paginator.num_pages }}.
+			        </span>
+
+			        {% if people.has_next %}
+			            <a href="?page={{ people.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>
+			            <a href="?page={{ people.paginator.num_pages }}">last &raquo;</a>
+			        {% endif %}
+			    </span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
