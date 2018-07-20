@@ -78,7 +78,6 @@ WSGI_APPLICATION = 'nanfresno.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {}
-print('POSTGRES_URL is', os.getenv('POSTGRES_URL'))
 DATABASES['default'] = dj_database_url.parse(os.getenv('POSTGRES_URL'))
 
 
