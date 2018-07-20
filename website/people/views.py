@@ -44,7 +44,14 @@ def index(request):
     return render(request, 'people/index.html', context)
 
 
-@login_required(login_url="/admin")
+# @login_required(login_url="/admin")
+# def details(request, id):
+#     person = People.objects.get(id=id)
+#     context = {
+#         'person': person
+#     }
+#     return render(request, 'people/details.html', context)
+
 def details(request, id):
     person = People.objects.get(id=id)
     context = {
