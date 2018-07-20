@@ -16,7 +16,7 @@ class peopleAdmin(admin.ModelAdmin):
 
     def hyperlink(self, obj):
         pk = obj.pk
-        return format_html('<a href="/people/details/%d"> View Person </a>' % pk)
+        return format_html('<a href="/people/details/%s"> View Person </a>' % pk)
 
 
 admin.site.register(People, peopleAdmin,)
