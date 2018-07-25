@@ -30,4 +30,3 @@ https://pypi.org/project/face_recognition/
  ```bash
  sudo pip install -r requirements.txt
  ```
- 
