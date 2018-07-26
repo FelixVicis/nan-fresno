@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv('DEBUG', default=False))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nan-fresno.herokuapp.com/', 'nanfresno.com']
 
 
 # Application definition
@@ -79,7 +79,12 @@ WSGI_APPLICATION = 'nanfresno.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {}
-DATABASES['default'] = dj_database_url.parse(os.getenv('POSTGRES_URL'))
+postgres_url = os.getenv('POSTGRES_URL')
+
+if postgres_url:
+    DATABASES['default'] = dj_database_url.parse(postgres_url)
+else:
+    DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation

@@ -1,0 +1,184 @@
+@import url("https://use.typekit.net/uam4dkl.css");
+
+body{
+	background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-inverse {
+    margin-bottom: 0px;
+}
+/*   Person Styles   */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+.details{
+	min-height: 600px;
+}
+
+.paginate_center{
+    text-align: center;
+}
+
+.list_view{
+	max-height: 300px;
+}
+
+.person_single{
+	max-height: 500px;
+}
+/*     End Person Styles     */
+
+/*     Marketing         */
+
+
+
+
+.firstsection {
+  /*background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55)), to(rgba(0, 0, 0, 0.55))), url("/static/images/city-dark-lights-8047.jpg");*/
+  /*background: -webkit-linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/static/images/city-dark-lights-8047.jpg");*/
+  /*background: -o-linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/static/images/city-dark-lights-8047.jpg");*/
+  background-image:url("/static/images/city-dark-lights.png");
+  background-size: contain;
+  height: 100vh; }
+  .firstsection .first_container {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-family: 'Lato';
+    width:400px; }
+    .firstsection .first_container .first_header {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 700;
+      white-space: pre; 
+      width:400px;}
+    .firstsection .first_container .first_info {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 200; }
+    .firstsection .first_container .learn_more {
+      font-size: 14px;
+      font-weight: 200;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 5px 5px; }
+
+.secondsection {
+  /*background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55)), to(rgba(0, 0, 0, 0.55))), url("/img/sadparent.jpg");*/
+  /*background: -webkit-linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/static/images/sadparent.jpg");*/
+  /*background: -o-linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/static/images/sadparent.jpg");*/
+  /*background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/static/images/sadparent.jpg");*/
+  background-image:url("/static/images/sadparent2.png");
+  background-size: contain;
+  height: 100vh; }
+  .secondsection .second_container {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-family: 'Lato'; }
+    .secondsection .second_container .second_header {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 700;
+      white-space: pre; }
+    .secondsection .second_container .second_info {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 200;
+      margin-right: 700px; }
+    .secondsection .second_container .learn_more {
+      font-size: 14px;
+      font-weight: 200;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 5px 5px;
+      margin-top: 20px; }
+
+.thirdsection {
+  /*background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55)), to(rgba(0, 0, 0, 0.55))), url("http://www.upbeaconhouse.org/wp-content/uploads/2018/04/vintage-blue-wall-texture-background.jpg");*/
+  /*background: -webkit-linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://www.upbeaconhouse.org/wp-content/uploads/2018/04/vintage-blue-wall-texture-background.jpg");*/
+  /*background: -o-linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://www.upbeaconhouse.org/wp-content/uploads/2018/04/vintage-blue-wall-texture-background.jpg");*/
+  /*background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("http://www.upbeaconhouse.org/wp-content/uploads/2018/04/vintage-blue-wall-texture-background.jpg");*/
+  background-image:url("http://www.upbeaconhouse.org/wp-content/uploads/2018/04/vintage-blue-wall-texture-background.jpg");
+  background-size: contain;
+  height: 100vh;
+  color: #fff; }
+
+
+/*     End Marketing     */
+/*  Footer */
+
+div#footer {
+    background: #101010;
+    background-color: black!important;
+}
+#footer h5{
+	padding-left: 10px;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    /*background-color: transparent;*/
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+
+    }
+}
