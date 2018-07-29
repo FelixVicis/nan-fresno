@@ -9,6 +9,7 @@ def encode_image(url, name=None, **additional_properties):
     try:
         processed = face_recognition.load_image_file(get(url))
         encodings = face_recognition.face_encodings(processed)
+        image = from_url(url)
     except Exception as e:
         print(e)
         return []
@@ -18,6 +19,7 @@ def encode_image(url, name=None, **additional_properties):
             'name': name or url,
             'url': url,
             'encoding': encoding,
+            'image': image,
             ** additional_properties
         }
         for encoding in encodings

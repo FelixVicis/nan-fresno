@@ -12,7 +12,15 @@ def get_urls(html_url):
         return []
 
     return [
-        img.get('src')
+        _clean(img.get('src'), html_url)
         for img
         in parsed.find_all('img')
+        if img.get('src')
     ]
+
+
+def _clean(src, url):
+    if src.startswith('/'):
+        return '{url}{src}'.format(src=src, url=url)
+
+    return src
