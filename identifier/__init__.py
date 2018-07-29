@@ -1,13 +1,17 @@
 #!/usr/bin/python3
 import face_recognition
-import open_image
+from .open_image import *
 
 known = []
 
 
 def encode_image(url, name=None, **additional_properties):
-    processed = face_recognition.load_image_file(open_image.get(url))
-    encodings = face_recognition.face_encodings(processed)
+    try:
+        processed = face_recognition.load_image_file(get(url))
+        encodings = face_recognition.face_encodings(processed)
+    except Exception as e:
+        print(e)
+        return []
 
     return [
         {
@@ -23,7 +27,7 @@ def encode_image(url, name=None, **additional_properties):
 def add_known_image(url, **kwargs):
     images = encode_image(url, **kwargs)
 
-    known.extend(*images)
+    known.extend(images)
 
     return known
 
@@ -31,7 +35,7 @@ def add_known_image(url, **kwargs):
 def test_for_known_faces(url):
     results = []
 
-    for image in encode(url):
+    for image in encode_image(url):
         for source in known:
             possible_match = face_recognition.compare_faces(
                 [source['encoding']],
@@ -47,7 +51,3 @@ def test_for_known_faces(url):
                 })
 
     return results
-
-
-if __name__ == '__main__':
-    pass

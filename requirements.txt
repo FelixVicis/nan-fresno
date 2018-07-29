@@ -1,0 +1,5 @@
+beautifulsoup4==4.6.0
+click==6.7
+face-recognition-models==0.3.0
+google==2.0.1
+Pillow==5.2.0
